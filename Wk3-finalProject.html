@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+      }
+      .background {
+        background: linear-gradient(to top, #ff8fa3, #ff8fa3);
+        text-align: center;
+      }
+
+      h1,
+      h2 {
+        color: #800f2f;
+      }
+
+      .user {
+        font-weight: normal;
+        font-style: italic;
+      }
+
+      img {
+        border-radius: 50%;
+        border: 4px solid #800f2f;
+      }
+
+      p {
+        line-height: normal;
+        font-size: 48px;
+      }
+
+      a {
+        font-weight: 900;
+        color: #c9184a;
+        margin-bottom: 15px;
+      }
+
+      em {
+        color: #590d22;
+      }
+
+      button {
+        margin: 20px auto;
+        cursor: pointer;
+        border-radius: 30px;
+        border: 3px solid #590d22;
+        background: #c9184a;
+        padding: 15px 20px;
+        box-shadow: 10px 10px 5px 1px #c9184a;
+        color: #590d22;
+        font-weight: 900;
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        background: #ff8fa3;
+        color: #c9184a;
+        border: 3px solid #c9184a;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="background">
+      <h1>🎶<br />Keep Your Brain Young With Music</h1>
+      <h1 class="user"></h1>
+      <h2>How tunes can tune up your mind</h2>
+
+      <img src="music.jpg" width="400" height="267" alt="music-img" />
+      <hr />
+      <p>
+        <strong>Music</strong> has the power to improve focus, reduce stress,
+        increase productivity, boost memory retention, enhance creativity,
+        improve cognitive performance, reduce distractions, and enhance
+        relaxation.
+      </p>
+      <hr />
+      <span>
+        <a
+          href="https://www.musicgateway.com/blog/how-to/7-benefits-of-listening-to-music-while-studying"
+          target="_blank"
+          >Find out more on: <em>Music Gateway</em></a
+        >
+        <a
+          href="https://www.hopkinsmedicine.org/health/wellness-and-prevention/keep-your-brain-young-with-music#:~:text=If%20you%20want%20to%20keep,%2C%20mental%20alertness%2C%20and%20memory."
+          target="_blank"
+          ><strong>and</strong> <em>John's Hopkins Medicine</em></a
+        >
+      </span>
+      <br />
+      <button>Get Free Tracks</button>
+      <br />
+      <h3>Coded by Nombulelo Khumalo</h3>
+    </div>
+    <script>
+      alert("Welcome to your favourite music page🎼");
+      function getTrack() {
+        let name = prompt("What is your name?");
+        let genre = prompt("What type of music do you prefer listening to?");
+        let music = prompt("Do you love music").toLowerCase().trim();
+
+        genre = genre === null || genre.trim() === "" ? "soothening" : genre;
+
+        let userMessage = document.querySelector(".user");
+        if (music === "yes") {
+          userMessage.innerHTML = `Step into the melody ${name}. We have just the right ${genre} music for you.`;
+        } else {
+          userMessage.innerHTML = `Dont worry ${name}. We have just the right ${genre} music for you.`;
+        }
+
+        alert(
+          "Grab the mic🎤 or your headphones🎧" + name + "!! Lets do this🎶🎙🎶"
+        );
+      }
+
+      let userButton = document.querySelector("button");
+      userButton.addEventListener("click", getTrack);
+    </script>
+  </body>
+</html>
